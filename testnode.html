@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<meta charset="utf-8">
+	<p id="demo">请点击按钮来获得 body 元素子节点的相关信息。</p>
+
+	<button onclick="myFunction()">试一下</button>
+	<ul>       
+		<li id="pic"><a onclick="showpic(this);return false;" href="pic\pic.jpg" title="图片库">图片库</a></li>              
+	    <li id="pic_aj11"><a onclick="showpic(this);return false;" href="pic\aj11.jpg" title="Air Jordan 11">Air Jordan 11
+	    </a></li>      
+		<li id="pic_kobe5"><a onclick="showpic(this);return false;" href="pic\kobe5.jpg" title="Kobe Venomenon 5">Kobe Venomenon 5</a></li>
+		<li id="pic_adi10"><a onclick="showpic(this);return false;" href="pic\superstar10.jpg" title="Adidas Superstar 10">Adidas Superstar 10</a></li>
+	</ul>
+	<script>
+	function myFunction()
+	{
+		var txt="";
+		var c=document.getElementsByTagName("ul")[0].childNodes;
+		for (i=1; i<c.length; i=i+2)
+		{
+			txt=txt + c[i].innerHTML+ "dsad" + "<br>";
+		};
+		alert("c.length=" + c.length);
+		var x=document.getElementById("demo");  
+		x.innerHTML=txt;
+	}
+	</script>
+
+	<p><b>注释：</b>元素中的空格被视为文本，而文本被视为节点。</p>
+
+</body>
+</html>
