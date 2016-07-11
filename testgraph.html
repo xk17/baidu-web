@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>testgraph</title>
+    <style type="text/css">
+    .chart-item {
+    	position:relative;
+    	display: inline-block;
+    	width: 50px;   	
+    }
+    </style> 
+  </head>
+<body>
+  
+  <div id="aqi-chart-wrap">
+  </div>
+  <script type="text/javascript">
+  var chartData = {
+  	"1": 400,
+  	"2": 300,
+  	"3": 800
+  };
+   var aqiChart = document.getElementById('aqi-chart-wrap');
+   var color = {};
+   var content = "";
+     for(var key in chartData){
+    color = 'rgb('+parseInt(255*Math.random())+','+parseInt(255*Math.random())+','+
+  	           parseInt(255*Math.random())+')';
+    content += "<div class='chart-item' style='height:"+chartData[key]+"px;background-color:"+color+";'></div>"
+
+    }
+    alert(content);
+   aqiChart.innerHTML = content;
+  </script>
+</body>
+</html>
