@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表单联动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.show {
+			display: block;
+		}
+		.hide {
+			/*position: absolute;*/
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<form id="select_identify">
+    <input type="radio" name="identify" id="in_school" checked>
+	<label for="in_school">在校生</label>
+	<input type="radio" name="identify" id="out_school">
+	<label for="no_school">非在校生</label>
+</form>
+<form id="school_identified">
+	<label>学校</label>
+	<select id="city">
+		<option value="BJ">北京</option>
+		<option value="SH">上海</option>
+		<option value="HZ">杭州</option>
+	</select>
+	<select id="school">
+		<option value="BY">北京邮电大学</option>
+		<option value="BD">北京大学</option>
+	</select>
+</form>
+<form id="outschool_identified" class="hide">
+	<label>就业单位</label>
+	<input type="text" name="work_address">
+</form>
+<script src="task31.js"></script>
+</body>
+</html>
